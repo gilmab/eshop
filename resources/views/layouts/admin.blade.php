@@ -22,30 +22,36 @@
 
     <link id="pagestyle" href="{{asset('admin/assets/css/material-dashboard.css?v=3.0.4')}}" rel="stylesheet" />
 
-    <link href="{{asset('design/css/bootstrap.min.css')}}" rel="stylesheet">
+
+
 
 
 </head>
 <body>
 
-    @include('layouts.inc.aside') ;
-    @include('layouts.inc.navbar') ;
-    @include('layouts.inc.content') ;
-    @include('layouts.inc.fixed') ;
+    @include('layouts.inc.aside')
+    @include('layouts.inc.navbar')
+
+    <div class="content">
+        @yield('content')
+    </div>
+
+    @include('layouts.inc.fixed')
 
      <!--   Core JS Files   -->
   <script src="{{asset('admin/assets/js/core/popper.min.js')}}"></script>
-  <script src="{{asset('admin/assets/js/core/bootstrap.min.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
   <script src="{{asset('admin/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{asset('admin/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
   <script src="{{asset('admin/assets/js/plugins/chartjs.min.js')}}"></script>
-   @include('layouts.inc.javascri') ;
+   @include('layouts.inc.javascri')
 
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+    <script src="{{asset('admin/assets/js/material-dashboard.min.js?v=3.0.4')}}"></script>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
+</html></body>
 </html>

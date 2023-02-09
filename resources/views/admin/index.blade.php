@@ -1,6 +1,11 @@
 @extends('layouts.admin') ;
 
 
-@section()
+@section('content')
+<div class="card">
+    <div class="card-body">
+        <h1> titi </h1>
+    </div>
 
+</div>
 @endsection
